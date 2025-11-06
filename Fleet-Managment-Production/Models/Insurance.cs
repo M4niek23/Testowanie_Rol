@@ -59,7 +59,8 @@ namespace Fleet_Managment_Production.Models
         public bool IsCurrent { get; set; }
         
         [Display(Name="Pojazd")]
-        public int VehicleId { get; set; }
+        [Required(ErrorMessage ="Musisz wybrać pojazd z listy.")]
+        public int? VehicleId { get; set; }
         public Vehicle Vehicle { get; set; }
     }
 }
